@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset=utf-8>
+	<title>Projeto V1</title>
+	<link rel=stylesheet href=style.css>
+	<script type="text/javascript" defer src=script3b.js></script>
+</head>
+<body>
+	<div class=wrapper>
+		<span class=title>Validador</span>
+		<div class=contInput>
+			<input type=text size=20 id=input autofocus>
+			<button onclick="validateInput()">CLICK</button>
+		</div>
+		<div id=answer><br></div>
+		<div class=svg>
+			<svg width="480" height="200" version="1.1" xmlns="http://www.w3.org/2000/svg">
+				<ellipse stroke="black" stroke-width="1" fill="none" cx="270.5" cy="38.5" rx="30" ry="30"/>
+				<text x="252.5" y="44.5" font-family="Times New Roman" font-size="20">i1p0</text>
+				<ellipse stroke="black" stroke-width="1" fill="none" cx="424.5" cy="94.5" rx="30" ry="30"/>
+				<text x="408.5" y="100.5" font-family="Times New Roman" font-size="20">i0i1</text>
+				<ellipse stroke="black" stroke-width="1" fill="none" cx="120.5" cy="94.5" rx="30" ry="30"/>
+				<text x="100.5" y="100.5" font-family="Times New Roman" font-size="20">p0p1</text>
+				<ellipse stroke="black" stroke-width="1" fill="none" cx="270.5" cy="159.5" rx="30" ry="30"/>
+				<text x="252.5" y="165.5" font-family="Times New Roman" font-size="20">i0p1</text>
+				<polygon stroke="black" stroke-width="1" points="65.5,94.5 90.5,94.5"/>
+				<text x="13.5" y="100.5" font-family="Times New Roman" font-size="20">Início</text>
+				<polygon fill="black" stroke-width="1" points="90.5,94.5 82.5,89.5 82.5,99.5"/>
+				<path stroke="black" stroke-width="1" fill="none" d="M 298.669,28.445 A 111.412,111.412 0 0 1 409.37,68.7"/>
+				<polygon fill="black" stroke-width="1" points="298.669,28.445 307.529,31.683 305.462,21.899"/>
+				<text x="364.5" y="23.5" font-family="Times New Roman" font-size="20">0</text>
+				<path stroke="black" stroke-width="1" fill="none" d="M 414.904,122.804 A 99.639,99.639 0 0 1 297.474,172.369"/>
+				<polygon fill="black" stroke-width="1" points="297.474,172.369 303.678,179.477 306.581,169.907"/>
+				<text x="369.5" y="189.5" font-family="Times New Roman" font-size="20">1</text>
+				<path stroke="black" stroke-width="1" fill="none" d="M 133.53,67.599 A 101.369,101.369 0 0 1 243.029,26.719"/>
+				<polygon fill="black" stroke-width="1" points="133.53,67.599 142.17,63.811 133.911,58.173"/>
+				<text x="167.5" y="20.5" font-family="Times New Roman" font-size="20">1</text>
+				<path stroke="black" stroke-width="1" fill="none" d="M 243.242,171.747 A 98.159,98.159 0 0 1 130.203,122.764"/>
+				<polygon fill="black" stroke-width="1" points="130.203,122.764 129.496,132.172 138.349,127.523"/>
+				<text x="163.5" y="188.5" font-family="Times New Roman" font-size="20">0</text>
+				<polygon stroke="black" stroke-width="1" points="148.605,84.007 242.395,48.993"/>
+				<polygon fill="black" stroke-width="1" points="242.395,48.993 233.151,47.106 236.649,56.475"/>
+				<text x="181.5" y="57.5" font-family="Times New Roman" font-size="20">1</text>
+				<polygon stroke="black" stroke-width="1" points="148.027,106.428 242.973,147.572"/>
+				<polygon fill="black" stroke-width="1" points="242.973,147.572 237.621,139.803 233.645,148.979"/>
+				<text x="180.5" y="148.5" font-family="Times New Roman" font-size="20">0</text>
+				<polygon stroke="black" stroke-width="1" points="298.694,48.752 396.306,84.248"/>
+				<polygon fill="black" stroke-width="1" points="396.306,84.248 390.497,76.815 387.079,86.213"/>
+				<text x="351.5" y="57.5" font-family="Times New Roman" font-size="20">0</text>
+				<polygon stroke="black" stroke-width="1" points="298.139,147.834 396.861,106.166"/>
+				<polygon fill="black" stroke-width="1" points="396.861,106.166 387.546,104.67 391.435,113.883"/>
+				<text x="352.5" y="148.5" font-family="Times New Roman" font-size="20">1</text>
+			</svg>
+		</div>
+		<div class=subtitles>
+			<span>p0p1: Número par de 0s e par de 1s</span>
+			<span>i0p1: Número ímpar de 0s e par de 1s</span>
+			<span>i1p0: Número ímpar de 1s e par de 0s</span>
+			<span>i0o1: Número ímpar de 0s e ímpar de 1s</span>
+		</div>
+	</div>
+</body>
+</html>

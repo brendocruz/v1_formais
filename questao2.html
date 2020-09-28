@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset=utf-8>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" defer src="script2.js"></script>
+	<style type="text/css">
+		* {
+			box-sizing: content-box;
+		}
+
+		.contConsole {
+			height: 300px;
+			width: 90%;
+			margin: 20px 10%;
+			border: 1px solid black;
+		}
+		.contButtons {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			border: 1px solid black;
+			width: 90%;
+			margin: 20px 10%;
+		}
+
+		.contButtons button {
+			width: 30%;
+			height: 45px;
+			margin: 5px;
+			padding: 5px;
+			border-radius: 10px;
+		}
+
+		.contButtons button:hover {
+			filter: invert(400%);
+		}
+
+		.state {
+			height: 15%;
+			width: 100%;
+			background-color: black;
+			color: rgb(0, 220, 0);
+			font: 30px "Lucida Console", monospace;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			white-space: pre-wrap;
+		}
+
+		.console {
+			width: 100%;
+			height: 85%;
+			background-color: #222222;
+			color: rgb(0, 200, 0);
+			text-align: left;
+			font: 20px "Lucida Console", monospace;
+			overflow: auto;
+		}
+
+		span.comment {
+			color: silver;
+		}
+	</style>
+</head>
+<body>
+	<div class=wrapper>
+		<div class=contConsole>
+			<div class=state>
+				<span>Estado: </span> 
+				<span class=current id=stateTitle></span>
+			</div>
+			<div class=console id=console>
+			</div>
+		</div>
+		<div class=contButtons>
+				<button onclick="changeState()">aprovar</button>
+				<button onclick="changeState()">cancelar</button>
+				<button onclick="changeState()">encaminhar</button>
+				<button onclick="changeState()">enviar</button>
+				<button onclick="changeState()">extornar</button>
+				<button onclick="changeState()">pagar</button>
+				<button onclick="changeState()">rejeitar</button>
+		</div>
+		<div class=svg>
+			<svg width="680" height="240" version="1.1" xmlns="http://www.w3.org/2000/svg">
+				<ellipse stroke="black" stroke-width="1" fill="none" cx="232.5" cy="88.5" rx="30" ry="30"/>
+				<text x="195.5" y="94.5" font-family="Times New Roman" font-size="20">aprovado</text>
+				<ellipse stroke="black" stroke-width="1" fill="none" cx="90.5" cy="88.5" rx="30" ry="30"/>
+				<text x="70.5" y="94.5" font-family="Times New Roman" font-size="20">novo</text>
+				<ellipse stroke="black" stroke-width="1" fill="none" cx="367.5" cy="88.5" rx="30" ry="30"/>
+				<text x="327.5" y="94.5" font-family="Times New Roman" font-size="20">transporte</text>
+				<ellipse stroke="black" stroke-width="1" fill="none" cx="497.5" cy="82.5" rx="30" ry="30"/>
+				<text x="463.5" y="88.5" font-family="Times New Roman" font-size="20">entregue</text>
+				<ellipse stroke="black" stroke-width="1" fill="none" cx="630.5" cy="82.5" rx="30" ry="30"/>
+				<text x="590.5" y="88.5" font-family="Times New Roman" font-size="20">finalizado</text>
+				<ellipse stroke="black" stroke-width="1" fill="none" cx="630.5" cy="82.5" rx="24" ry="24"/>
+				<ellipse stroke="black" stroke-width="1" fill="none" cx="232.5" cy="202.5" rx="30" ry="30"/>
+				<text x="199.5" y="208.5" font-family="Times New Roman" font-size="20">cancelar</text>
+				<ellipse stroke="black" stroke-width="1" fill="none" cx="232.5" cy="202.5" rx="24" ry="24"/>
+				<ellipse stroke="black" stroke-width="1" fill="none" cx="367.5" cy="202.5" rx="30" ry="30"/>
+				<text x="327.5" y="208.5" font-family="Times New Roman" font-size="20">extornado</text>
+				<ellipse stroke="black" stroke-width="1" fill="none" cx="497.5" cy="202.5" rx="30" ry="30"/>
+				<text x="462.5" y="208.5" font-family="Times New Roman" font-size="20">rejeitado</text>
+				<ellipse stroke="black" stroke-width="1" fill="none" cx="90.5" cy="202.5" rx="30" ry="30"/>
+				<text x="54.5" y="208.5" font-family="Times New Roman" font-size="20">recusado</text>
+				<polygon stroke="black" stroke-width="1" points="56.5,44.5 72.157,64.761"/>
+				<text x="10.5" y="35.5" font-family="Times New Roman" font-size="20">Incio</text>
+				<polygon fill="black" stroke-width="1" points="72.157,64.761 71.221,55.374 63.309,61.488"/>
+				<path stroke="black" stroke-width="1" fill="none" d="M 112.733,68.561 A 90.926,90.926 0 0 1 210.267,68.561"/>
+				<polygon fill="black" stroke-width="1" points="210.267,68.561 206.197,60.05 200.833,68.49"/>
+				<text x="139.5" y="45.5" font-family="Times New Roman" font-size="20">pagar</text>
+				<path stroke="black" stroke-width="1" fill="none" d="M 257.497,72.11 A 101.416,101.416 0 0 1 342.503,72.11"/>
+				<polygon fill="black" stroke-width="1" points="342.503,72.11 337.335,64.218 333.144,73.297"/>
+				<text x="253.5" y="53.5" font-family="Times New Roman" font-size="20">encaminhar</text>
+				<polygon stroke="black" stroke-width="1" points="232.5,118.5 232.5,172.5"/>
+				<polygon fill="black" stroke-width="1" points="232.5,172.5 237.5,164.5 227.5,164.5"/>
+				<text x="237.5" y="151.5" font-family="Times New Roman" font-size="20">cancelar</text>
+				<path stroke="black" stroke-width="1" fill="none" d="M 390.864,69.896 A 91.589,91.589 0 0 1 472.522,66.127"/>
+				<polygon fill="black" stroke-width="1" points="472.522,66.127 467.228,58.318 463.183,67.463"/>
+				<text x="404.5" y="48.5" font-family="Times New Roman" font-size="20">enviar</text>
+				<path stroke="black" stroke-width="1" fill="none" d="M 523.008,66.907 A 104.127,104.127 0 0 1 604.992,66.907"/>
+				<polygon fill="black" stroke-width="1" points="604.992,66.907 599.606,59.162 595.67,68.354"/>
+				<text x="533.5" y="49.5" font-family="Times New Roman" font-size="20">aprovar</text>
+				<polygon stroke="black" stroke-width="1" points="497.5,112.5 497.5,172.5"/>
+				<polygon fill="black" stroke-width="1" points="497.5,172.5 502.5,164.5 492.5,164.5"/>
+				<text x="502.5" y="148.5" font-family="Times New Roman" font-size="20">rejeitar</text>
+				<path stroke="black" stroke-width="1" fill="none" d="M 391.324,184.5 A 89.32,89.32 0 0 1 473.676,184.5"/>
+				<polygon fill="black" stroke-width="1" points="391.324,184.5 400.728,185.249 396.118,176.375"/>
+				<text x="399.5" y="165.5" font-family="Times New Roman" font-size="20">extornar</text>
+				<path stroke="black" stroke-width="1" fill="none" d="M 258.807,188.257 A 115.125,115.125 0 0 1 341.193,188.257"/>
+				<polygon fill="black" stroke-width="1" points="258.807,188.257 268.067,190.064 264.488,180.726"/>
+				<text x="266.5" y="171.5" font-family="Times New Roman" font-size="20">cancelar</text>
+				<polygon stroke="black" stroke-width="1" points="90.5,118.5 90.5,172.5"/>
+				<polygon fill="black" stroke-width="1" points="90.5,172.5 95.5,164.5 85.5,164.5"/>
+				<text x="27.5" y="151.5" font-family="Times New Roman" font-size="20">recusar</text>
+				<path stroke="black" stroke-width="1" fill="none" d="M 117.797,190.193 A 140.339,140.339 0 0 1 205.203,190.193"/>
+				<polygon fill="black" stroke-width="1" points="205.203,190.193 199.158,182.951 196.044,192.453"/>
+				<text x="128.5" y="174.5" font-family="Times New Roman" font-size="20">cancelar</text>
+			</svg>
+		</div>
+	</div>
+</body>
+</html>

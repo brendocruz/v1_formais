@@ -1,0 +1,96 @@
+* {
+	box-sizing: border-box;
+}
+body, html {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+	font-size: 50px;
+	background-color: gray;
+}
+
+span.title {
+	font: bold 1rem Arial;
+	display: block;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: white;
+	width: 60%;
+	max-width: 800px;
+	min-width: 700px;
+	box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4);
+	margin: auto;
+	min-height: 100%;
+}
+
+.contInput {
+	margin: 20px;
+	width: 600px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 5px;
+	background-color: silver;
+}
+
+.contInput:hover {
+	background-color: gray;
+}
+
+.contInput:hover button {
+	background-color: gray;
+}
+
+.contInput input {
+	float: left;
+	width: 75%;
+	height: 1.2rem;
+	margin: 0;
+	font-size: 1rem;
+	border: none;
+	outline: none;
+	
+}
+
+button {
+	float: left;
+	margin: 0;
+	height: 1.2rem;
+	width: 25%;
+	border: none;
+	background-color: silver;
+	outline: none;
+	font-size: 0.5rem;
+	cursor: pointer;
+}
+
+.svg {
+	border: 1px solid black;
+}
+
+.svg {
+	user-select: none;
+	margin-bottom: 30px;
+}
+
+#answer {
+	font: 0.5rem "Arial";
+	margin-bottom: 10px;
+}
+
+.subtitles {
+	font: 0.4rem "Arial", sans-serif;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 30px;
+}
+
+.subtitles span {
+	display: block;
+}
