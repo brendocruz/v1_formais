@@ -31,6 +31,11 @@ class Context {
 		this.state.rejeitar();
 	}
 
+	recusar() {
+		this.state.recusar();
+	}
+
+
 	set changeState(newState) {
 		this.state = newState;
 		addConsoleEntry(`# Pedido ${this.state.stateName}`);
@@ -184,14 +189,6 @@ class PedidoCancelado extends State {
 		super(_context);
 		this.stateName = "Cancelado";
 	}
-
-	aprovar() {}
-	cancelar() {}
-	encaminhar() {}
-	enviar() {}
-	extornar() {}
-	pagar() {}
-	rejeitar() {}
 }
 
 class PedidoFinalizado extends State {
@@ -199,14 +196,6 @@ class PedidoFinalizado extends State {
 		super(_context);
 		this.stateName = "Finalizado";
 	}
-
-	aprovar() {}
-	cancelar() {}
-	encaminhar() {}
-	enviar() {}
-	extornar() {}
-	pagar() {}
-	rejeitar() {}
 }
 
 

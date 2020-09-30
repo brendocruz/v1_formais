@@ -1,7 +1,6 @@
 function validateInput() {
 	let answer = document.querySelector("#answer");
 	let string = getInput();
-
 	result = /[^a]/.test(string);
 	if(result === true) {
 		answer.innerHTML = "Caracteres inválidos";
@@ -13,7 +12,7 @@ function validateInput() {
 		return;
 	}
 
-	if(Number.isInteger(Math.log(string.length) / Math.log(2))) {
+	if(Number.isInteger(Math.sqrt(string.length))) {
 		answer.innerHTML = "Cadeia válida";
 	} else {
 		answer.innerHTML = "Cadeia inválida";
